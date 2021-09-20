@@ -1,0 +1,83 @@
+
+.container {
+  padding: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  float:left;
+  width: 50%;
+}
+
+
+@media screen and (max-width: 640px){
+  .container{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .container{
+    width: 300px;
+  }
+}
+.content {
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 300px;
+  width: 293px;
+  left: 1;
+  top: 2;
+  bottom: 3;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 40%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+.content-details p{
+  color: #fff;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+  
+.content-image{
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+  }
